@@ -1,0 +1,38 @@
+import java.util.HashMap;
+/**
+ * Write a description of class MapTester here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class MapTester
+{
+    // instance variables - replace the example below with your own
+    private HashMap<String, String> phoneBook;
+    
+    /**
+     * Constructor for objects of class MapTester
+     */
+    public MapTester()
+    {
+        // initialise instance variables
+        phoneBook = new HashMap<>();
+    }
+    public void enterNumber(String name, String number){
+        phoneBook.put(name,number);
+    }
+    public String lookupNumber(String name){
+        return phoneBook.get(name);
+    }
+    /**
+     * An example of a method - replace this comment with your own
+     *
+     * @param  y  a sample parameter for a method
+     * @return    the sum of x and y
+     */
+    public void printAllNumbers(){
+        for (String name : phoneBook.keySet()){
+            System.out.println(name + " : " + phoneBook.get(name));
+        }
+    }
+}
